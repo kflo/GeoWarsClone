@@ -1,7 +1,11 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{697E8FFB-C542-63DF-831E-FD83F164358D}") = "GeometryWarsClone", "Assembly-CSharp-firstpass.csproj", "{03C2E26D-4C26-4BF7-9C77-1E6A8C24EE06}"
+EndProject
 Project("{697E8FFB-C542-63DF-831E-FD83F164358D}") = "GeometryWarsClone", "Assembly-CSharp.csproj", "{D33B4313-9389-FED9-BCC1-29FDDB316F25}"
+EndProject
+Project("{697E8FFB-C542-63DF-831E-FD83F164358D}") = "GeometryWarsClone", "Assembly-CSharp-Editor.csproj", "{4A482481-93C8-CD0E-0585-152916CF3E86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03C2E26D-4C26-4BF7-9C77-1E6A8C24EE06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03C2E26D-4C26-4BF7-9C77-1E6A8C24EE06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03C2E26D-4C26-4BF7-9C77-1E6A8C24EE06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03C2E26D-4C26-4BF7-9C77-1E6A8C24EE06}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D33B4313-9389-FED9-BCC1-29FDDB316F25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D33B4313-9389-FED9-BCC1-29FDDB316F25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D33B4313-9389-FED9-BCC1-29FDDB316F25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D33B4313-9389-FED9-BCC1-29FDDB316F25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A482481-93C8-CD0E-0585-152916CF3E86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A482481-93C8-CD0E-0585-152916CF3E86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A482481-93C8-CD0E-0585-152916CF3E86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A482481-93C8-CD0E-0585-152916CF3E86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
