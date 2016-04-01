@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class SeekerScript : MonoBehaviour {
-
 	// Use this for initialization
 	void Start () {
 	
@@ -28,5 +27,14 @@ public class SeekerScript : MonoBehaviour {
 			);
 		// end bounds clanp
 		
+	}
+		
+	// When a collision happens
+	void OnTriggerEnter2D(Collider2D collision) {
+		var name = collision.gameObject.name;
+		if (name == "Bullet(Clone)") {
+			Destroy (gameObject);
+			Destroy (collision.gameObject);
+		}
 	}
 }

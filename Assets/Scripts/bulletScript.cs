@@ -6,11 +6,18 @@ public class bulletScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		var r2d = GetComponent<Rigidbody2D> ();
+		var velocity = r2d.velocity;
 
-		// Get the vector in the direction of the ship and muliply it by the scalar speed
-		// to get the new velocity vector
-		var velocity = r2d.transform.right * speed;
-		r2d.velocity = velocity;
+		var xAxis = Input.GetAxisRaw ("RightAnalogHorizontal");
+		var yAxis = Input.GetAxisRaw ("RightAnalogVertical");
+
+		if (xAxis != 0.0f || yAxis != 0.0f) {
+			var angle = (Mathf.Atan2 (-xAxis, yAxis) * Mathf.Rad2Deg) - 90.0f;
+			velocity.x = -xAxis * speed;
+			velocity.y = yAxis * speed;
+			r2d.velocity = velocity;
+			r2d.MoveRotation (-angle);
+		}
 	}
 	
 	// Update is called once per frame

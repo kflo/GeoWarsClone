@@ -16,8 +16,8 @@ public class SpaceshipScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		var v = r2d.velocity;
-		var xAxis = (Input.GetAxis ( "LeftAnalogHorizontal" ));
-		var yAxis = Input.GetAxis ( "LeftAnalogVertical" );
+		var xAxis = Input.GetAxisRaw ( "LeftAnalogHorizontal" );
+		var yAxis = Input.GetAxisRaw ( "LeftAnalogVertical" );
 		if (xAxis != 0.0f || yAxis != 0.0f)
 			angle = (Mathf.Atan2 (-xAxis, yAxis) * Mathf.Rad2Deg) - 90.0f;
 		r2d.MoveRotation ( -angle );
@@ -29,8 +29,10 @@ public class SpaceshipScript : MonoBehaviour {
 				Mathf.Clamp (r2d.position.x, -8.5f, 8.5f), 
 				Mathf.Clamp (r2d.position.y, -4.5f, 4.5f)
 			);
-		
-		if (Input.GetButtonDown ("PS4_X")) {
+
+		xAxis = Input.GetAxisRaw ("RightAnalogHorizontal");
+		yAxis = Input.GetAxisRaw ("RightAnalogVertical");
+		if ((xAxis > 0.8f || xAxis < -0.8) || (yAxis > 0.2999f || yAxis < -0.2999) ) {
 			Instantiate (bullet, transform.position, transform.rotation);
 		}
 	}
